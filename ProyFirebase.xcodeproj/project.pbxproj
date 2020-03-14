@@ -20,6 +20,8 @@
 		FF354AFA241C45420027BA76 /* CentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF354AF9241C45420027BA76 /* CentralViewController.swift */; };
 		FF354AFC241C47220027BA76 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF354AFB241C47220027BA76 /* ProfileViewController.swift */; };
 		FF354AFE241C48400027BA76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF354AFD241C48400027BA76 /* GoogleService-Info.plist */; };
+		FF354B02241C77830027BA76 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF354B01241C77830027BA76 /* Model.swift */; };
+		FF354B04241C78670027BA76 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF354B03241C78670027BA76 /* PhotoCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		FF354AF9241C45420027BA76 /* CentralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralViewController.swift; sourceTree = "<group>"; };
 		FF354AFB241C47220027BA76 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FF354AFD241C48400027BA76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF354B01241C77830027BA76 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FF354B03241C78670027BA76 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				C6A0BE1324141D3200F92A0D /* welcomeViewController.swift */,
 				FF354AF9241C45420027BA76 /* CentralViewController.swift */,
 				FF354AFB241C47220027BA76 /* ProfileViewController.swift */,
+				FF354B01241C77830027BA76 /* Model.swift */,
+				FF354B03241C78670027BA76 /* PhotoCollectionViewController.swift */,
 			);
 			path = ProyFirebase;
 			sourceTree = "<group>";
@@ -243,10 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF354B02241C77830027BA76 /* Model.swift in Sources */,
 				CC91B173241411F4008DEAC2 /* LoginViewController.swift in Sources */,
 				CC587855241332CB00454749 /* ViewController.swift in Sources */,
 				C6A0BE10241416AF00F92A0D /* mainViewController.swift in Sources */,
 				FF354AFA241C45420027BA76 /* CentralViewController.swift in Sources */,
+				FF354B04241C78670027BA76 /* PhotoCollectionViewController.swift in Sources */,
 				C6A0BE1424141D3200F92A0D /* welcomeViewController.swift in Sources */,
 				CC587851241332CB00454749 /* AppDelegate.swift in Sources */,
 				FF354AFC241C47220027BA76 /* ProfileViewController.swift in Sources */,

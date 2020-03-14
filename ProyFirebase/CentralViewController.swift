@@ -22,9 +22,9 @@ class CentralViewConytroller: UITabBarController {
         ProfileController!.tabBarItem.image = UIImage(systemName: "person.fill")
         
         
-        let PhotosController = UINavigationController(rootViewController: ProfileViewController())
-        PhotosController.tabBarItem.title = "Fotos"
-        PhotosController.tabBarItem.image = UIImage(systemName: "doc.richtext")
+        let PhotosController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PhotoCollectionViewController") as?  PhotoCollectionViewController
+        PhotosController!.tabBarItem.title = "Fotos"
+        PhotosController!.tabBarItem.image = UIImage(systemName: "doc.richtext")
         
         let SaveController = UINavigationController(rootViewController: ProfileViewController())
         SaveController.tabBarItem.title = "Favoritos"
@@ -34,7 +34,7 @@ class CentralViewConytroller: UITabBarController {
         
         viewControllers = [
             ProfileController!,
-            PhotosController,
+            PhotosController!,
             SaveController
         ]
     }
