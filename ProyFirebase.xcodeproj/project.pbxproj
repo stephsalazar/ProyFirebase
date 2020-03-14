@@ -22,6 +22,9 @@
 		FF354AFE241C48400027BA76 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF354AFD241C48400027BA76 /* GoogleService-Info.plist */; };
 		FF354B02241C77830027BA76 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF354B01241C77830027BA76 /* Model.swift */; };
 		FF354B04241C78670027BA76 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF354B03241C78670027BA76 /* PhotoCollectionViewController.swift */; };
+		FFFFA439241D332500F2820A /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFA438241D332500F2820A /* PhotoCollectionViewCell.swift */; };
+		FFFFA43B241D4AFB00F2820A /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFA43A241D4AFB00F2820A /* DetailPhotoViewController.swift */; };
+		FFFFA443241D5F0000F2820A /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFA442241D5F0000F2820A /* FavoritesCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		FF354AFD241C48400027BA76 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF354B01241C77830027BA76 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FF354B03241C78670027BA76 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		FFFFA438241D332500F2820A /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFFFA43A241D4AFB00F2820A /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
+		FFFFA442241D5F0000F2820A /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,9 @@
 				FF354AFB241C47220027BA76 /* ProfileViewController.swift */,
 				FF354B01241C77830027BA76 /* Model.swift */,
 				FF354B03241C78670027BA76 /* PhotoCollectionViewController.swift */,
+				FFFFA438241D332500F2820A /* PhotoCollectionViewCell.swift */,
+				FFFFA43A241D4AFB00F2820A /* DetailPhotoViewController.swift */,
+				FFFFA442241D5F0000F2820A /* FavoritesCollectionViewController.swift */,
 			);
 			path = ProyFirebase;
 			sourceTree = "<group>";
@@ -253,11 +262,14 @@
 				CC91B173241411F4008DEAC2 /* LoginViewController.swift in Sources */,
 				CC587855241332CB00454749 /* ViewController.swift in Sources */,
 				C6A0BE10241416AF00F92A0D /* mainViewController.swift in Sources */,
+				FFFFA443241D5F0000F2820A /* FavoritesCollectionViewController.swift in Sources */,
 				FF354AFA241C45420027BA76 /* CentralViewController.swift in Sources */,
 				FF354B04241C78670027BA76 /* PhotoCollectionViewController.swift in Sources */,
+				FFFFA43B241D4AFB00F2820A /* DetailPhotoViewController.swift in Sources */,
 				C6A0BE1424141D3200F92A0D /* welcomeViewController.swift in Sources */,
 				CC587851241332CB00454749 /* AppDelegate.swift in Sources */,
 				FF354AFC241C47220027BA76 /* ProfileViewController.swift in Sources */,
+				FFFFA439241D332500F2820A /* PhotoCollectionViewCell.swift in Sources */,
 				CC587853241332CB00454749 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ioslab.ProyFirebase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephSalazar.ProyectFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,7 +439,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ioslab.ProyFirebase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephSalazar.ProyectFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

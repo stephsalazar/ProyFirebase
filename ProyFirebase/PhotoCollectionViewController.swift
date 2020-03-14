@@ -21,8 +21,8 @@ class PhotoCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        self.collectionView!.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.delegate = self
         // Do any additional setup after loading the view.
         getPhotos()
     }
@@ -51,10 +51,24 @@ class PhotoCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCollectionViewCell
     
-        cell.backgroundColor = .purple
-    
+//      cell.backgroundColor = .purple
+//      print("urlList", urlList)
+        
+        let url = urlList[indexPath.item]
+        let urlPhoto = URL(string: url)!
+        
+        URLSession.shared.dataTask(with: urlPhoto) { (data, _, _) in
+            guard let data = data else {
+//                cell.photoView.image = UIImage(named: "user")
+                return
+            }
+            DispatchQueue.main.async{
+                cell.photoView.image = UIImage(data: data)
+            }
+        }.resume()
+        
         return cell
     }
 
@@ -89,6 +103,17 @@ class PhotoCollectionViewController: UICollectionViewController {
     }
     */
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath) as? PhotoCollectionViewCell
+        
+        // Al tocar la foto necesitamos instanciar la vista y luego presentarla
+        // Creamos el archivo DetailPhotoViewController (archivo swfit)
+        let detailView = DetailPhotoViewController() // instancia
+        detailView.imagen = cell?.photoView.image
+        navigationController?.pushViewController(detailView, animated: true) // presentarla (como esto es programático hacemos un push en las vistas del navigation Controller)
+    }
+
     
     func getPhotos(){
         let urlFlickr = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=f9f27845ae34d2988d276e50b28b8893&tags=conejos&format=json&nojsoncallback=1"
@@ -116,5 +141,18 @@ class PhotoCollectionViewController: UICollectionViewController {
                 }
             }
         }.resume()
+    }
+}
+
+// La palabra extension sirve para poder añadir funcionalidades sin modificar la clase
+
+// palabra - a quien responde - de quien hereda
+extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
 }
